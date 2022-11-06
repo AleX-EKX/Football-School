@@ -1,0 +1,483 @@
+body, html {
+    min-width: 280px;
+margin: 0;
+    padding: 0;
+	background:url(fon.jpg) no-repeat center center fixed; /* ФОН */
+    -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    width: 100%; /*Ширина 100%  */
+height: 800px; /* Высота 800px */
+color: #FFFFFF; /*БЕЛЫЙ ЦВЕТ  */
+}
+
+
+/* Выпадающая кнопка */
+.dropbtn {
+    background-color: transparent;
+    color: azure;
+    padding: 6px;
+    font-size: 12px;
+    border: none;
+    text-align: left;
+	font-weight: bold;
+	white-space: nowrap;
+	text-align: right;
+	vertical-align: middle;
+	padding-right: 25px;
+}
+
+/* Контейнер <div> - необходим для размещения выпадающего содержимого */
+.dropdown {
+    
+    position: relative;
+    display: inline-block;
+}
+
+/* Раскрывающийся контент (по умолчанию скрыт) */
+.dropdown-content {
+    -webkit-transform: rotateZ(-100px);
+        -ms-transform: rotateZ(-100px);
+        transform:translateX(75px) translateY(-26px); /* сдвигание в право на 75пх и вверх на 26пх */
+   
+    display: none;
+    position: absolute;
+    background-color: #3e8e41;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Ссылки внутри выпадающего */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Изменить цвет выпадающих ссылок при наведении */
+.dropdown-content a:hover {background-color: transparent;}
+
+/* Показать выпадающее меню при наведении */
+.dropdown:hover .dropdown-content {display: block;}
+
+/* Изменить цвет фона кнопки раскрывающегося списка, когда отображается содержимое раскрывающегося списка. */
+.dropdown:hover .dropbtn {background-color: #3e8e41;}
+
+.container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, 100px);
+    grid-template-rows: repeat(2, 100px);
+}
+.container > div > img {
+    width: 100%;/*Ширина 100%  */
+    height: 100%;/*Высота 100%  */
+    object-fit: cover;
+} 
+/* навигацию по сайту. */
+nav{
+    text-decoration-line: underline; /* оформление текста */
+    
+}
+/* gallery  
+.wrapper{
+margin: 0 auto;
+overflow: hidden;
+width: 100px;
+margin-top: 20px;
+}
+.min {
+list-style: none;
+padding: 0;
+margin: 0;
+float: left;
+}
+.min li {
+padding: 0;
+margin: 0;
+float: left;
+clear: both;
+}
+.min li a {
+display: block;
+padding: 0 20px 21px 0;
+}
+.min li a img {
+display: block;
+}
+.images {
+width: 900px;
+height: 500px;
+overflow: hidden;
+}
+*/
+/* gallery */
+.wrapper {
+margin: 0 auto;
+width: 350px;
+overflow: hidden;
+margin-top: 20px;
+}
+@keyframes fade {
+0%{ opacity: 0; }
+10%{ opacity: 1; }
+20%{ opacity: 1; }
+30%{ opacity: 1; }
+40%{ opacity: 0; }
+50%{ opacity: 0; }
+60%{ opacity: 0; }
+70%{ opacity: 0; }
+80%{ opacity: 0; }
+90%{ opacity: 0;}
+100% { opacity: 0; }
+}
+.wrapper img {/*Устанавливаем размер картинки*/
+position:absolute;
+margin: 0 auto;
+width: 350px;
+    overflow: hidden;
+    opacity:0;/* Делаем все изображения прозрачными. Непрозрачность будет появляться во время анимации.*/
+    animation-name: fade; /*Пишем имя анимации, которое будет связывать правило @keyframes  с селектором.*/
+    animation-duration: 20s; /*Устанавливаем общее время анимации*/
+    animation-iteration-count: infinite;  /*Делаем анимацию бесконечной.*/
+}
+.wrapper img:nth-child(1) { animation-delay: 0s; }
+.wrapper img:nth-child(2) { animation-delay: 5s; }
+.wrapper img:nth-child(3) { animation-delay: 10s; }
+.wrapper img:nth-child(4) { animation-delay: 15s; }
+/* gallery     
+#thumbs { padding-top: 10px; overflow: hidden; }
+#thumbs img, #largeImage {
+    border: 1px solid gray;
+    padding: 4px;
+    background-color: white;
+    cursor: pointer;
+}
+#thumbs img {
+    float: left;
+    margin-right: 6px;
+}
+#description {
+    background: black;
+    color: white;
+    position: absolute;
+    bottom: 0;
+    padding: 10px 20px;
+    width: 525px;
+    margin: 5px;
+    
+}
+*/
+
+
+/* ТАБЛИЦА */
+table{
+    border-collapse: collapse;
+    width:100% ;
+
+    border:0 ;
+    padding: 0;
+    
+}
+    /*АБЗАЦ, ЯЧЕЙКА ТАБЛИЦЫ  */
+
+p,td { font-family:Arial, Helvetica, sans-serif;
+	font-size:12px; /* Размер шрифта */
+	margin-top: 0px;
+    
+}
+/* АБЗАЦ ДР */
+pl{
+     font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	margin-top: 0px;
+}
+/* hover эффект */
+.hover-image-8 a {
+  display: inline-block;
+  background: #0083ff; // меняет цвет при наведении на фото
+  line-height: 0;
+}
+.hover-image-8 a img {
+  transition: filter 0.5s linear;
+  filter: brightness(2) grayscale(1) opacity(0.5);
+}
+.hover-image-8 a:hover img {
+  filter: none;
+}
+
+
+.hover-image-9 a {
+  display: inline-block;
+  background: black ; // меняет цвет при наведении на фото
+  line-height: 0;
+}
+.hover-image-9 a img {
+  transition: filter 0.5s linear;
+  filter: brightness(2) grayscale(1) opacity(0.5);
+}
+.hover-image-9 a:hover img {
+  filter: none;
+}
+/* ССЫЛКИ */
+a{
+    
+	color: #ffe08e;
+	text-decoration: underline;
+}
+/*  */
+*{
+    box-sizing: border-box
+}
+/* стиль элемента при наведении на него курсора мыши*/
+a:hover{
+    background-size: 4px 50px;
+	color: #ffe08e;
+	text-decoration: underline;
+}
+/* стиль для активной ссылки. */
+a:active {
+color:#FF0000;
+text-decoration:none
+}
+/* стиль для посещенной ссылки. */
+a:visited {
+color:azure;
+text-decoration:none
+}
+
+/* определяет цвет ссылок на веб-странице */
+a:link{
+    color: #0000d0; /* Цвет ссылок */
+    padding: 2px; /* Поля вокруг текста */ 
+}
+/* Заголовоки */
+h1,h2,h3 {
+	background-image: url(../images/c-3-1.gif);
+	background-repeat: no-repeat;
+	background-position: left top;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: middle;
+	color: #ffe08e;
+	font-size: 14px;
+	font-weight: bold;
+	padding-top: 2px;
+	padding-bottom: 6px;
+}
+
+/* скр.эл  */
+a.hidden {
+	text-decoration: none;
+	color: #000000;
+	cursor:default;
+}
+/* форма  */
+form {
+     margin:0;
+     padding:0;
+}
+/* маркированный список */
+ul {
+	margin-left:20px;
+	margin-top:0px;
+	padding:1px;
+	list-style-type: square;
+	line-height: 16px;
+	}
+
+
+
+
+.bgy {
+	background-repeat: repeat-y;
+}
+
+.bottom_addr {
+	font-size: 11px;
+	color: #ffe08e;
+	padding-right: 10px;
+	padding-left: 10px;
+	background-image: url(../images/b2-bg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+	vertical-align: middle;
+	text-align: right;
+}
+
+.bottom_addr_lnk {
+	text-decoration: none;
+}
+
+.bottom_addr_lnk:hover {
+	text-decoration: underline;
+}
+
+
+.bgx {
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+
+.norepeat {
+	background-repeat: no-repeat;
+}
+
+.c_name {
+	font-size: 17px;
+	font-weight: bold;
+	text-transform: uppercase;
+	color: #FFFFFF;
+}
+.l-shadow-bg {
+	
+	background-position: left top;
+	background-repeat: repeat-y;
+}
+.l-bg {
+	
+	background-position: right top;
+}
+.r-bg {
+	
+	background-position: left top;
+}
+
+
+/* меню  */
+.bottom-menu {
+	color: #FFFFFF;
+	text-align: center;
+	vertical-align: middle;
+	background-image: url(../images/b2-bg.gif);
+	background-repeat: repeat-x;
+	background-position: top;
+}
+
+.bottom-menu-lnk {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+.bottom-menu-lnk:hover {
+	color: #ffe08e;
+	text-decoration: underline;
+}
+
+.menu {
+	color: #ffe08e;
+	font-weight: bold;
+	white-space: nowrap;
+	text-align: center;
+	vertical-align: middle;
+	padding-right: 25px;
+
+}
+.menu_lnk{
+	text-decoration: none;
+	color: azure;
+}
+
+.menu_lnk:hover {
+	color: #ffe08e;
+	text-decoration: none;
+}
+.r-shad-bg {
+	
+	background-repeat: repeat-y;
+	background-position: left top;
+}
+
+
+/* текст */
+.body_txt {
+	color: azure;
+	text-align: justify;
+	vertical-align: top;
+	padding-top: 6px;
+	padding-right: 10px;
+	padding-bottom: 3px;
+	padding-left: 10px;
+}
+.c-5-1 {
+	background-image: url(../images/c-5-1-bg.jpg);
+	background-repeat: no-repeat;
+	background-position: top;
+	font-size: 12px;
+	color: #EDD385;
+	padding-top: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: top;
+	padding-bottom: 0px;
+}
+.c-5-2 {
+
+    background-repeat: no-repeat;
+	background-position:top;
+	font-size: 12px;
+	color: #EDD385;
+	padding-top: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: bottom;
+	padding-bottom: 0;
+}
+.body_txtx {
+	background-position:top;
+	font-size: 12px;
+	color: #ffffff;
+	padding-top: 30px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-align: center;
+	vertical-align: top;
+	padding-bottom: 100px;
+}
+
+
+.l-content {
+	color: #FFFFFF;
+	text-align: justify;
+	padding-top: 7px;
+	padding-right: 1px;
+	padding-bottom: 7px;
+	padding-left: 10px;
+	vertical-align: top;
+}
+.float-left {
+	float: left;
+	margin-top: 6px;
+	margin-right: 2px;
+	margin-bottom: 0px;
+}
+
+/* ............. 
+         Media
+................   */
+@media (max-width:1160px){
+    .menu,.body_txt{
+        width: 100%;
+    }
+    .menu,.body_txt{
+        width: 100%;
+
+        margin: 0;
+        margin-bottom: 30px;
+        margin-left: 15px;
+        margin-right: 15px;
+        text-align: center;
+    }
+}
+ 
+
+
+
+
+
